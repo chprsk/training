@@ -1,0 +1,86 @@
+{
+  "id": "3a1c8f4c-b867-4552-ab20-9f2f99e9b4c1",
+  "version": "2.0",
+  "name": "POC-SeleniumToll-App",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "d0ff6b3e-7132-4b01-a490-e509c13bee05",
+    "name": "googleSearch",
+    "commands": [{
+      "id": "685376e8-40fd-4312-be2e-f5265d81e2c1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c900f878-2cb2-49e6-9ea6-f6a8cf3ce462",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec7b7f20-31d2-45ce-87e8-e8f8beba3bc6",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Intellipaat reviews"
+    }, {
+      "id": "4886f584-e9aa-4f9a-beb8-60ef2cb5c140",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "4e10c92e-602c-4b53-ba1b-7d9601075548",
+      "comment": "",
+      "command": "click",
+      "target": "css=.srg > .g:nth-child(2) .LC20lb",
+      "targets": [
+        ["css=.srg > .g:nth-child(2) .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div[2]/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Intellipaat Reviews | Glassdoor.co.in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d25ad61-95f1-4b36-998f-d8bd9913e4b6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,172)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "26ac20c0-edb8-41f8-9be3-5628671b9632",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d0ff6b3e-7132-4b01-a490-e509c13bee05"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}
