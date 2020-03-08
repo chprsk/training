@@ -1,4 +1,4 @@
-package com.actitime.basics.autosuggestions;
+package com.actitime.basics.waits;
 
 import java.util.concurrent.TimeUnit;
 
