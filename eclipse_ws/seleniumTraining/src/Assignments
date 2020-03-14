@@ -1,0 +1,18 @@
+Assignments-1
+--------------
+ - try xpath in different Web Apps - facebook, amazon, gsmarena etc
+ 
+Assignment --2
+---------------
+ - try to create project  using reusable functions 
+ - try to create tasks using reusable functions
+ 
+ 
+Assignment - 3
+----------------
+ - write a reusable function validateToastMessageUsingFluentWait
+ 	* Every 100 ms you should poll for the element 
+ 	* max timeout is 20 Sec
+ - Enhance MouseMovementDemo.java to print all the elements when the mouse is moved on a specfic tab
+ 	
+ 

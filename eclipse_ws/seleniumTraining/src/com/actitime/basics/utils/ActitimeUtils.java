@@ -2,6 +2,9 @@ package com.actitime.basics.utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ActitimeUtils extends DriverUtils
 {
@@ -62,9 +65,22 @@ public class ActitimeUtils extends DriverUtils
 		type("id", "customerLightBox_nameField", customerName);
 		type("id","customerLightBox_descriptionField",customerDesc);
 		click("id", "customerLightBox_commitBtn");
+		System.out.println("Waiting for Success Toast Message to appear---");
+		validateToastMessageUsingWebDriverWait();
 		
 		
+	}
+
+
+	private static void validateToastMessageUsingWebDriverWait() {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
 		
+		WebElement successToastMsg = wait.until(ExpectedConditions.visibilityOf(getElement("xpath", "//div[@class='toast']")));
+		System.out.println("Success message is displayed..." + successToastMsg.getText());
+
+		System.out.println("Waiting for success message to disappear");
+		wait.until(ExpectedConditions.invisibilityOf(getElement("xpath", "//div[@class='toast']")));
+		System.out.println("Success Toast message is disappeared");
 	}
 	
 	public static void logout()

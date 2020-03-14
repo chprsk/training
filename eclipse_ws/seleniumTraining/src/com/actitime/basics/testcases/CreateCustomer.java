@@ -15,7 +15,7 @@ public class CreateCustomer {
 		ActitimeUtils.login("admin","manager");
 		ActitimeUtils.enterModule("tasks");
 		ActitimeUtils.clickOnNewCustomerButton();
-		ActitimeUtils.createCustomer("Feb-Batch_Customer1", "Feb-Batch_Customer1_Desc");
+		ActitimeUtils.createCustomer("Feb-Batch_Customer2", "Feb-Batch_Customer2_Desc");
 		ActitimeUtils.logout();
 		
 		

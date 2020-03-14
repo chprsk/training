@@ -68,6 +68,7 @@ public class DriverUtils
 	{
 		System.out.println("--- finding the element ---");
 		WebElement ele = null;
+		boolean flag = false;
 		switch (typeOfIdentifier)
 		{
 		case "id":
@@ -107,7 +108,35 @@ public class DriverUtils
 			break;
 		}
 		
-		return ele;
+		if(ele.isDisplayed())
+		{
+			System.out.println("Element is displayed ");
+			if(ele.isEnabled())
+			{
+				System.out.println("Element is enabled ");
+				flag = true;
+			}
+			else
+			{
+				System.out.println("Element is not enabled sendeing null element ");
+				
+			}
+		}
+		else
+		{
+			System.out.println("Elment is not displayed so sending null and terminating the execution");
+			
+		}
+		
+		if(flag)
+		{
+			return ele;
+		}
+		else
+		{
+			return null;
+		}
+		
 	}
 	
 	
