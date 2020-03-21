@@ -1,3 +1,5 @@
+SEND YOUR ASSIGNMENTS TO -aru03.info@gmail.com
+
 Assignments-1
 --------------
  - try xpath in different Web Apps - facebook, amazon, gsmarena etc
@@ -15,4 +17,7 @@ Assignment - 3
  	* max timeout is 20 Sec
  - Enhance MouseMovementDemo.java to print all the elements when the mouse is moved on a specfic tab
  	
- 
+ Assignment -4
+ ------------------
+ Automate - http://formy-project.herokuapp.com/switch-window
+ w3schools - > any page -> print the elments after clicking on Run button in `try me`

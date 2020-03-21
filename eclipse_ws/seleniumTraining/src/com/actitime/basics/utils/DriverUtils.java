@@ -41,6 +41,7 @@ public class DriverUtils
 	{
 		System.out.println("--- Launching Actitime Application ---");
 		driver.get("http://localhost/login.do");
+		validateTitle("actiTIME - Login");
 		System.out.println("--- Applcition Launched Successfully ---");
 	}
 	
@@ -153,12 +154,46 @@ public class DriverUtils
 		getElement(typeOfIdentifier, value).sendKeys(textToType);
 	}
 	
+	public static void selectCheckBox(String typeOfIdentifier,String value)
+	{
+		System.out.println("--- selecting CheckBox -----");
+		WebElement ele  = getElement(typeOfIdentifier, value);
+		if(ele.isSelected())
+		{
+			System.out.println("Check box is already Selected!!!!!");
+		}
+		else
+		{
+			System.out.println("Clicking on Checkbox");
+			ele.click();
+		}
+	
+	}
+	
+	public static void sleep(long ms)
+	{
+		try {
+			Thread.sleep(ms);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	
-	
-	
-	
-	
+	public static void validateTitle(String expectedTitle)
+	{
+		String actualTitle = driver.getTitle();
+		if(actualTitle.equals(expectedTitle))
+		{
+			System.out.println("##############################[step pass] -- Actual and expected title matched");
+		}
+		else
+		{
+			System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$[step fail] -- Actual title and expected title are not matched...");
+		}
+		
+	}
 	
 	
 	

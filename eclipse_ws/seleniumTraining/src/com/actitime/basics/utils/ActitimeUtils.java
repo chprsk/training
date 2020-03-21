@@ -20,12 +20,8 @@ public class ActitimeUtils extends DriverUtils
 		driver.findElement(By.id("username")).sendKeys(un);
 		driver.findElement(By.name("pwd")).sendKeys(pwd);
 		driver.findElement(By.id("loginButton")).click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		sleep(5000);
+		validateTitle("actiTIME - Enter Time-Track");
 	}
 	
 	
@@ -35,9 +31,11 @@ public class ActitimeUtils extends DriverUtils
 		switch (name.toUpperCase()) {
 		case "TASKS":
 			driver.findElement(By.xpath("//div[text()='TASKS']/parent::a")).click();
+			validateTitle("actiTIME - Task List");
 			break;
 		case "USERS":
 			driver.findElement(By.xpath("//div[text()='USERS']/parent::a")).click();
+			validateTitle("actiTIME - User List");
 			break;
 
 		default:
@@ -55,6 +53,14 @@ public class ActitimeUtils extends DriverUtils
 		click("xpath", "//div[text()='Add New']/parent::div");
 		click("xpath", "//div[contains(text(),'New Customer')]");
 		
+		if(getElement("id", "customerLightBox").isDisplayed())
+		{
+			System.out.println("##############################[step pass] -- Create customer Pop-up is displayed");
+		}
+		else
+		{
+			System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$[step fail] -- Create customer Pop-up is NOT displayed");
+		}
 	}
 	
 	
@@ -67,8 +73,7 @@ public class ActitimeUtils extends DriverUtils
 		click("id", "customerLightBox_commitBtn");
 		System.out.println("Waiting for Success Toast Message to appear---");
 		validateToastMessageUsingWebDriverWait();
-		
-		
+
 	}
 
 
