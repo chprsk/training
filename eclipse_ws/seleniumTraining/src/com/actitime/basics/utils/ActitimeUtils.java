@@ -31,6 +31,7 @@ public class ActitimeUtils extends DriverUtils
 		switch (name.toUpperCase()) {
 		case "TASKS":
 			driver.findElement(By.xpath("//div[text()='TASKS']/parent::a")).click();
+			sleep(2000);
 			validateTitle("actiTIME - Task List");
 			break;
 		case "USERS":
