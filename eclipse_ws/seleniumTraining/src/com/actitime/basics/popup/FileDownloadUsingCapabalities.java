@@ -14,7 +14,7 @@ public class FileDownloadUsingCapabalities {
 	public static void main(String[] args) {
 		
 		FirefoxProfile fp =  new FirefoxProfile();
-		fp.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip");
+		fp.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip,application/pdf,text/plain");
 		fp.setPreference("browser.download.folderList", 2);
 	//	fp.setPreference("browser.download.useDownloadDir", false);
 		fp.setPreference("browser.download.dir", "D:\\Intellipaat\\Intellipaat_09_Feb\\autoit\\");

@@ -12,7 +12,7 @@ public class FileDownloadPopUp {
 	public static void main(String[] args) throws IOException
 	{
 		
-		WebDriver driver = ActitimeUtils.getMyDriver("ff");
+		WebDriver driver = ActitimeUtils.getMyDriver("edge");
 		ActitimeUtils.launchApp("https://www.selenium.dev/downloads/");
 		ActitimeUtils.click("xpath", "//a[contains(text(),'64 bit Windows IE')]");
 		ActitimeUtils.sleep(3000);

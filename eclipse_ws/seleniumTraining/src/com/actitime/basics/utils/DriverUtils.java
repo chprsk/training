@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 /*
  This is a Class with Reusable functions 
@@ -44,10 +45,12 @@ public class DriverUtils {
 			break;
 		case "ff":
 			System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
-			driver = new FirefoxDriver();
+			FirefoxOptions options  = new FirefoxOptions();
+			options.addArguments("--disable-infobars");
+			driver = new FirefoxDriver(options);
 			break;
 		case "edge":
-			System.setProperty("webdriver.edge.driver", "drivers\\msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver", "drivers\\MicrosoftWebDriver.exe");
 			driver = new EdgeDriver();
 			break;
 
