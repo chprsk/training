@@ -1,0 +1,5 @@
+WinWaitActive("Open")
+Sleep(2000)
+ControlSetText("Open","","Edit1","D:\Intellipaat\Intellipaat_09_Feb\eclipse_ws\.gitignore")
+Sleep(2000)
+ControlClick("Open","&Open","Button1")

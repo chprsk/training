@@ -16,8 +16,9 @@ public class CreateCustomerUsingExternalData {
 		String url = FileHandler.getPropertyValue("url");
 		String userName = FileHandler.getPropertyValue("username");
 		String password = FileHandler.getPropertyValue("password");
-		
-		WebDriver driver = ActitimeUtils.getMyDriver();
+		String browser = FileHandler.getPropertyValue("browser");
+				
+		WebDriver driver = ActitimeUtils.getMyDriver(browser);
 		ActitimeUtils.launchApp(url);
 		ActitimeUtils.login(userName,password);
 		ActitimeUtils.enterModule("tasks");

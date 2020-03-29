@@ -1,0 +1,5 @@
+WinWaitActive("Opening IEDriverServer_x64_3.150.1.zip")
+Sleep(2000)
+Send("{DOWN}")
+Sleep(2000)
+send("{ENTER}")
