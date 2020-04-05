@@ -93,8 +93,8 @@ public class ActitimeUtils extends DriverUtils
 	{
 		System.out.println("--- Logout of Actitime ");
 		click("id", "logoutLink");
-		driver.close();
-		driver = null;
+//		driver.close();
+//		driver = null;
 			
 	}
 	

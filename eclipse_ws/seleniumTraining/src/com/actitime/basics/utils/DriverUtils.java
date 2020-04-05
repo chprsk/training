@@ -9,6 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.Assert;
+
+
 
 /*
  This is a Class with Reusable functions 
@@ -194,12 +197,8 @@ public class DriverUtils {
 
 	public static void validateTitle(String expectedTitle) {
 		String actualTitle = driver.getTitle();
-		if (actualTitle.equals(expectedTitle)) {
-			System.out.println("##############################[step pass] -- Actual and expected title matched");
-		} else {
-			System.out.println(
-					"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$[step fail] -- Actual title and expected title are not matched...");
-		}
+		
+		Assert.assertEquals(actualTitle,expectedTitle);
 
 	}
 
