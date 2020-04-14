@@ -2,6 +2,7 @@ package com.actitime.basics;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BasicWebElements {
@@ -17,7 +18,8 @@ public class BasicWebElements {
 		
 		
 		//Enter Form Details
-		driver.findElement(By.id("first-name")).sendKeys("User First Name");
+		WebElement usernameTextBox = driver.findElement(By.id("first-name"));
+		usernameTextBox.sendKeys("User First Name");
 		driver.findElement(By.id("last-name")).sendKeys("User Last Name");
 		driver.findElement(By.id("job-title")).sendKeys("Software Engg");
 		driver.findElement(By.id("radio-button-3")).click();
